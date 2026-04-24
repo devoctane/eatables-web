@@ -49,26 +49,11 @@ const testimonials = [
 ];
 
 const faqs = [
-  {
-    q: "Do I need a huge following to join?",
-    a: "Nope. We want hungry humans with good taste, not influencer resumés. If you love food and can write one honest sentence, you're in.",
-  },
-  {
-    q: "How much does it cost?",
-    a: "Free. Forever. We make money from restaurant partnerships — never from your reviews, never from hidden placements.",
-  },
-  {
-    q: "What do I get for being a foodie?",
-    a: "Early access to the app, a verified foodie badge, invites to tastings with partner restaurants, and a real creator dashboard once you hit 500 followers.",
-  },
-  {
-    q: "Can I share my reviews on Instagram / TikTok?",
-    a: "Yes, one tap. We generate a nice card for stories and a vertical clip for reels. Bring your people.",
-  },
-  {
-    q: "When does it launch?",
-    a: "Summer 2026. Waitlist members get in two weeks early, with their city unlocked first.",
-  },
+  { q: "Do I need a huge following to join?", a: "Nope. We want hungry humans with good taste, not influencer resumés. If you love food and can write one honest sentence, you're in." },
+  { q: "How much does it cost?", a: "Free. Forever. We make money from restaurant partnerships — never from your reviews, never from hidden placements." },
+  { q: "What do I get for being a foodie?", a: "Early access to the app, a verified foodie badge, invites to tastings with partner restaurants, and a real creator dashboard once you hit 500 followers." },
+  { q: "Can I share my reviews on Instagram / TikTok?", a: "Yes, one tap. We generate a nice card for stories and a vertical clip for reels. Bring your people." },
+  { q: "When does it launch?", a: "Summer 2026. Waitlist members get in two weeks early, with their city unlocked first." },
 ];
 
 export default function FoodiesPage() {
@@ -88,8 +73,8 @@ export default function FoodiesPage() {
       <Navbar />
 
       {/* HERO */}
-      <div style={{ position: "relative", padding: "40px 56px 100px" }}>
-        {/* Amber blob */}
+      <div className="e-foodies-hero">
+        {/* Amber blob background */}
         <div
           style={{
             position: "absolute",
@@ -103,16 +88,7 @@ export default function FoodiesPage() {
           }}
         />
 
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            display: "grid",
-            gridTemplateColumns: "1.1fr 0.9fr",
-            gap: 60,
-            alignItems: "center",
-          }}
-        >
+        <div className="e-foodies-hero-grid">
           {/* Left */}
           <div>
             <div
@@ -131,15 +107,7 @@ export default function FoodiesPage() {
                 boxShadow: "0 2px 0 rgba(26,26,26,0.08)",
               }}
             >
-              <span
-                style={{
-                  width: 6,
-                  height: 6,
-                  borderRadius: 6,
-                  background: "var(--primary)",
-                  display: "inline-block",
-                }}
-              />
+              <span style={{ width: 6, height: 6, borderRadius: 6, background: "var(--primary)", display: "inline-block" }} />
               For the hungry &amp; opinionated
             </div>
 
@@ -147,7 +115,7 @@ export default function FoodiesPage() {
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(64px, 7vw, 104px)",
+                fontSize: "clamp(52px, 7vw, 104px)",
                 lineHeight: 0.92,
                 letterSpacing: "-0.045em",
                 margin: 0,
@@ -174,7 +142,7 @@ export default function FoodiesPage() {
 
             <p
               style={{
-                fontSize: 19,
+                fontSize: "clamp(15px, 1.8vw, 19px)",
                 lineHeight: 1.5,
                 color: "rgba(26,26,26,0.7)",
                 maxWidth: 500,
@@ -187,18 +155,18 @@ export default function FoodiesPage() {
               all from your phone, between bites.
             </p>
 
-            <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+            <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
               <button
                 style={{
-                  padding: "16px 28px",
+                  padding: "16px 24px",
                   background: "var(--ink)",
                   color: "var(--primary)",
                   borderRadius: 999,
                   fontSize: 15,
                   fontWeight: 700,
-                  cursor: "pointer",
                   border: "none",
                   fontFamily: "inherit",
+                  cursor: "pointer",
                 }}
               >
                 Become an Eatables foodie
@@ -222,17 +190,11 @@ export default function FoodiesPage() {
           </div>
 
           {/* Foodie profile card */}
-          <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <div
+              className="e-foodie-card"
               style={{
-                width: 380,
-                background: "#fff",
-                borderRadius: 24,
-                padding: 24,
-                boxShadow:
-                  "0 30px 60px -20px rgba(0,0,0,0.18), 0 0 0 1.5px rgba(26,26,26,0.06)",
-                transform: "rotate(-3deg)",
-                position: "relative",
+                boxShadow: "0 30px 60px -20px rgba(0,0,0,0.18), 0 0 0 1.5px rgba(26,26,26,0.06)",
               }}
             >
               {/* Badge */}
@@ -257,56 +219,32 @@ export default function FoodiesPage() {
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                 }}
               >
-                VERIFIED
-                <br />
-                FOODIE
+                VERIFIED<br />FOODIE
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
                 <div
                   style={{
-                    width: 64,
-                    height: 64,
-                    borderRadius: 32,
+                    width: 64, height: 64, borderRadius: 32,
                     background: "#E8D4A0",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: 22,
-                    fontWeight: 700,
-                    color: "#5A4A2A",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 22, fontWeight: 700, color: "#5A4A2A",
                     fontFamily: "var(--font-space-grotesk), sans-serif",
+                    flexShrink: 0,
                   }}
                 >
                   RK
                 </div>
                 <div>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-space-grotesk), sans-serif",
-                      fontSize: 20,
-                      fontWeight: 700,
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
+                  <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, letterSpacing: "-0.01em" }}>
                     Riya Kapoor
                   </div>
-                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>
-                    @riyabites · Mumbai
-                  </div>
+                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>@riyabites · Mumbai</div>
                 </div>
               </div>
 
-              <div
-                style={{
-                  marginTop: 18,
-                  fontSize: 14,
-                  lineHeight: 1.5,
-                  color: "#5A4A2A",
-                }}
-              >
-                &ldquo;Ramen hunter. Vada pav evangelist. I eat so you
-                don&apos;t have to guess.&rdquo;
+              <div style={{ marginTop: 18, fontSize: 14, lineHeight: 1.5, color: "#5A4A2A" }}>
+                &ldquo;Ramen hunter. Vada pav evangelist. I eat so you don&apos;t have to guess.&rdquo;
               </div>
 
               <div
@@ -320,63 +258,33 @@ export default function FoodiesPage() {
                   borderBottom: "1px solid rgba(26,26,26,0.08)",
                 }}
               >
-                {[
-                  { num: "412", label: "Reviews" },
-                  { num: "2.4k", label: "Followers" },
-                  { num: "18", label: "Badges" },
-                ].map((s) => (
+                {[{ num: "412", label: "Reviews" }, { num: "2.4k", label: "Followers" }, { num: "18", label: "Badges" }].map((s) => (
                   <div key={s.label} style={{ display: "flex", flexDirection: "column" }}>
-                    <div
-                      style={{
-                        fontFamily: "var(--font-space-grotesk), sans-serif",
-                        fontSize: 28,
-                        fontWeight: 700,
-                        letterSpacing: "-0.02em",
-                      }}
-                    >
+                    <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em" }}>
                       {s.num}
                     </div>
-                    <div
-                      style={{
-                        fontSize: 11,
-                        color: "#8A7F5F",
-                        letterSpacing: "0.06em",
-                        textTransform: "uppercase",
-                        fontWeight: 600,
-                        marginTop: 2,
-                      }}
-                    >
+                    <div style={{ fontSize: 11, color: "#8A7F5F", letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, marginTop: 2 }}>
                       {s.label}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  gap: 6,
-                  marginTop: 14,
-                  flexWrap: "wrap",
-                }}
-              >
-                {["🏅 Top reviewer", "🌶 Spice queen", "🍜 Ramen scout"].map(
-                  (t) => (
-                    <span
-                      key={t}
-                      style={{
-                        fontSize: 11,
-                        fontWeight: 600,
-                        padding: "6px 10px",
-                        background: "var(--accent-bg)",
-                        borderRadius: 999,
-                        color: "var(--ink)",
-                      }}
-                    >
-                      {t}
-                    </span>
-                  )
-                )}
+              <div style={{ display: "flex", gap: 6, marginTop: 14, flexWrap: "wrap" }}>
+                {["🏅 Top reviewer", "🌶 Spice queen", "🍜 Ramen scout"].map((t) => (
+                  <span
+                    key={t}
+                    style={{
+                      fontSize: 11, fontWeight: 600,
+                      padding: "6px 10px",
+                      background: "var(--accent-bg)",
+                      borderRadius: 999,
+                      color: "var(--ink)",
+                    }}
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -385,23 +293,10 @@ export default function FoodiesPage() {
 
       {/* HOW IT WORKS */}
       <div
-        style={{
-          background: "var(--ink)",
-          color: "var(--cream)",
-          padding: "100px 56px",
-          position: "relative",
-          overflow: "hidden",
-        }}
+        className="e-how-section"
+        style={{ background: "var(--ink)", color: "var(--cream)", position: "relative", overflow: "hidden" }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "end",
-            marginBottom: 60,
-            gap: 40,
-          }}
-        >
+        <div className="e-how-top">
           <div>
             <div
               style={{
@@ -419,7 +314,7 @@ export default function FoodiesPage() {
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(48px, 5vw, 72px)",
+                fontSize: "clamp(40px, 5vw, 72px)",
                 lineHeight: 0.95,
                 letterSpacing: "-0.035em",
                 margin: 0,
@@ -429,41 +324,19 @@ export default function FoodiesPage() {
               From hungry
               <br />
               to{" "}
-              <em
-                style={{
-                  color: "var(--primary)",
-                  fontStyle: "italic",
-                  fontFamily: "Georgia, serif",
-                  fontWeight: 400,
-                }}
-              >
+              <em style={{ color: "var(--primary)", fontStyle: "italic", fontFamily: "Georgia, serif", fontWeight: 400 }}>
                 well-followed
               </em>
               <br />
               in three bites.
             </h2>
           </div>
-          <div
-            style={{
-              fontSize: 17,
-              color: "rgba(253,251,243,0.65)",
-              maxWidth: 360,
-              lineHeight: 1.5,
-            }}
-          >
-            No content calendar, no ring lights, no &ldquo;hey guys welcome
-            back.&rdquo; Just the food you were going to eat anyway — now with
-            an audience.
+          <div style={{ fontSize: 17, color: "rgba(253,251,243,0.65)", maxWidth: 360, lineHeight: 1.5 }}>
+            No content calendar, no ring lights, no &ldquo;hey guys welcome back.&rdquo; Just the food you were going to eat anyway — now with an audience.
           </div>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 24,
-          }}
-        >
+        <div className="e-steps-grid">
           {steps.map((s) => (
             <div
               key={s.n}
@@ -488,35 +361,11 @@ export default function FoodiesPage() {
               >
                 {s.n}
               </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-space-grotesk), sans-serif",
-                  fontSize: 28,
-                  fontWeight: 700,
-                  letterSpacing: "-0.02em",
-                  marginBottom: 10,
-                }}
-              >
+              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 10 }}>
                 {s.title}
               </div>
-              <div
-                style={{
-                  fontSize: 15,
-                  color: "rgba(253,251,243,0.65)",
-                  lineHeight: 1.55,
-                }}
-              >
-                {s.text}
-              </div>
-              <div
-                style={{
-                  marginTop: 24,
-                  height: 120,
-                  borderRadius: 14,
-                  overflow: "hidden",
-                  border: "1px solid rgba(253,251,243,0.08)",
-                }}
-              >
+              <div style={{ fontSize: 15, color: "rgba(253,251,243,0.65)", lineHeight: 1.55 }}>{s.text}</div>
+              <div style={{ marginTop: 24, height: 120, borderRadius: 14, overflow: "hidden", border: "1px solid rgba(253,251,243,0.08)" }}>
                 <FoodPlaceholder label={`step ${s.n}`} tone={s.tone} />
               </div>
             </div>
@@ -525,7 +374,7 @@ export default function FoodiesPage() {
       </div>
 
       {/* TESTIMONIALS */}
-      <div style={{ padding: "120px 56px", background: "var(--cream)", position: "relative" }}>
+      <div className="e-test-section" style={{ background: "var(--cream)", position: "relative" }}>
         <div
           style={{
             fontFamily: "ui-monospace, Menlo, monospace",
@@ -543,7 +392,7 @@ export default function FoodiesPage() {
           style={{
             fontFamily: "var(--font-space-grotesk), sans-serif",
             fontWeight: 700,
-            fontSize: "clamp(48px, 5vw, 72px)",
+            fontSize: "clamp(40px, 5vw, 72px)",
             lineHeight: 0.95,
             letterSpacing: "-0.035em",
             textAlign: "center",
@@ -567,13 +416,7 @@ export default function FoodiesPage() {
           </span>
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 20,
-          }}
-        >
+        <div className="e-testimonials-grid">
           {testimonials.map((t) => (
             <div
               key={t.name}
@@ -588,9 +431,7 @@ export default function FoodiesPage() {
               }}
             >
               <div style={{ display: "flex", gap: 2, marginBottom: 16 }}>
-                {[0, 1, 2, 3, 4].map((n) => (
-                  <StarIcon key={n} size={16} color="#FFC528" />
-                ))}
+                {[0, 1, 2, 3, 4].map((n) => <StarIcon key={n} size={16} color="#FFC528" />)}
               </div>
               <div
                 style={{
@@ -608,24 +449,15 @@ export default function FoodiesPage() {
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <div
                   style={{
-                    width: 44,
-                    height: 44,
-                    borderRadius: 22,
+                    width: 44, height: 44, borderRadius: 22,
                     background: t.avatar,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: 15,
-                    fontWeight: 700,
-                    color: "#5A4A2A",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 15, fontWeight: 700, color: "#5A4A2A",
                     fontFamily: "var(--font-space-grotesk), sans-serif",
                     flexShrink: 0,
                   }}
                 >
-                  {t.name
-                    .split(" ")
-                    .map((w) => w[0])
-                    .join("")}
+                  {t.name.split(" ").map((w) => w[0]).join("")}
                 </div>
                 <div>
                   <div style={{ fontSize: 14, fontWeight: 700 }}>{t.name}</div>
@@ -638,21 +470,8 @@ export default function FoodiesPage() {
       </div>
 
       {/* FAQ */}
-      <div
-        style={{
-          padding: "120px 56px",
-          background: "var(--accent-bg)",
-          position: "relative",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "0.8fr 1.2fr",
-            gap: 80,
-            alignItems: "start",
-          }}
-        >
+      <div className="e-faq-section" style={{ background: "var(--accent-bg)", position: "relative" }}>
+        <div className="e-faq-grid">
           <div>
             <div
               style={{
@@ -670,28 +489,16 @@ export default function FoodiesPage() {
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
                 fontWeight: 700,
-                fontSize: "clamp(48px, 4.5vw, 72px)",
+                fontSize: "clamp(36px, 4.5vw, 72px)",
                 lineHeight: 0.95,
                 letterSpacing: "-0.035em",
                 margin: 0,
               }}
             >
-              The stuff
-              <br />
-              you&apos;re about
-              <br />
-              to ask.
+              The stuff<br />you&apos;re about<br />to ask.
             </h2>
-            <div
-              style={{
-                fontSize: 16,
-                color: "rgba(26,26,26,0.65)",
-                lineHeight: 1.55,
-                marginTop: 20,
-              }}
-            >
-              Short answers. If something&apos;s still unclear, email{" "}
-              <b>hi@eatables.app</b> — a human will reply, promise.
+            <div style={{ fontSize: 16, color: "rgba(26,26,26,0.65)", lineHeight: 1.55, marginTop: 20 }}>
+              Short answers. If something&apos;s still unclear, email <b>hi@eatables.app</b> — a human will reply, promise.
             </div>
           </div>
 
@@ -704,10 +511,8 @@ export default function FoodiesPage() {
                   background: openFaq === i ? "#fff" : "transparent",
                   borderRadius: 16,
                   padding: "22px 24px",
-                  borderBottom:
-                    openFaq === i ? "none" : "1.5px solid rgba(26,26,26,0.12)",
-                  boxShadow:
-                    openFaq === i ? "0 10px 30px -10px rgba(26,26,26,0.1)" : "none",
+                  borderBottom: openFaq === i ? "none" : "1.5px solid rgba(26,26,26,0.12)",
+                  boxShadow: openFaq === i ? "0 10px 30px -10px rgba(26,26,26,0.1)" : "none",
                   marginBottom: openFaq === i ? 8 : 0,
                   cursor: "pointer",
                   transition: "all .2s",
@@ -719,39 +524,26 @@ export default function FoodiesPage() {
                     justifyContent: "space-between",
                     alignItems: "center",
                     fontFamily: "var(--font-space-grotesk), sans-serif",
-                    fontSize: 20,
+                    fontSize: "clamp(16px, 1.5vw, 20px)",
                     fontWeight: 600,
                     letterSpacing: "-0.01em",
+                    gap: 16,
                   }}
                 >
                   <span>{f.q}</span>
                   <span
                     style={{
-                      width: 32,
-                      height: 32,
-                      borderRadius: 16,
-                      background:
-                        openFaq === i ? "var(--primary)" : "rgba(26,26,26,0.08)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: 18,
-                      fontWeight: 500,
-                      flexShrink: 0,
+                      width: 32, height: 32, borderRadius: 16,
+                      background: openFaq === i ? "var(--primary)" : "rgba(26,26,26,0.08)",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      fontSize: 18, fontWeight: 500, flexShrink: 0,
                     }}
                   >
                     {openFaq === i ? "–" : "+"}
                   </span>
                 </div>
                 {openFaq === i && (
-                  <div
-                    style={{
-                      marginTop: 14,
-                      fontSize: 15,
-                      lineHeight: 1.6,
-                      color: "rgba(26,26,26,0.7)",
-                    }}
-                  >
+                  <div style={{ marginTop: 14, fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,26,0.7)" }}>
                     {f.a}
                   </div>
                 )}

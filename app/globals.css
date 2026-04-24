@@ -7,32 +7,206 @@
   --accent-bg: #FFF3E0;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; }
+body { background: var(--cream); color: var(--ink); margin: 0; padding: 0; }
+button { cursor: pointer; font-family: inherit; border: none; }
+input { font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+
+/* ============================================================
+   RESPONSIVE LAYOUT CLASSES
+   These exist because inline styles can't respond to breakpoints.
+   Visual properties (color, shadow, radius, typography) stay in
+   inline styles; structural properties live here.
+   ============================================================ */
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+.e-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 56px;
+  position: relative;
+  z-index: 10;
+}
+.e-nav-links { display: flex; gap: 32px; }
+.e-hamburger { display: none; }
+.e-mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0; right: 0;
+  padding: 16px 20px 20px;
+  z-index: 50;
+}
+.e-mobile-menu.open { display: flex; }
+
+/* ── Landing hero ────────────────────────────────────────────── */
+.e-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  padding: 0 56px 56px;
+  align-items: center;
+}
+.e-yellow-block {
+  position: absolute;
+  top: 0; right: 0; bottom: -120px;
+  width: 56%;
+  border-radius: 240px 0 0 0;
+  z-index: 0;
+}
+.e-waitlist-wrap {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 6px 6px 22px;
+  width: 440px;
+  max-width: 100%;
+}
+.e-phone-col {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
+/* ── Foodies page ────────────────────────────────────────────── */
+.e-foodies-hero { position: relative; padding: 40px 56px 100px; overflow: hidden; }
+.e-foodies-hero-grid {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
 }
-
-body {
-  background: var(--cream);
-  color: var(--ink);
-  margin: 0;
-  padding: 0;
+.e-foodie-card {
+  width: 380px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  transform: rotate(-3deg);
+  position: relative;
 }
-
-button {
-  cursor: pointer;
-  font-family: inherit;
-  border: none;
+.e-how-section { padding: 100px 56px; }
+.e-how-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  gap: 40px;
 }
+.e-steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.e-test-section { padding: 120px 56px; }
+.e-testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.e-faq-section { padding: 120px 56px; }
+.e-faq-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; align-items: start; }
 
-input {
-  font-family: inherit;
+/* ── About page ──────────────────────────────────────────────── */
+.e-about-hero { position: relative; padding: 80px 56px 120px; text-align: center; }
+.e-about-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 20px;
+  align-items: end;
+  margin-top: 80px;
 }
+.e-about-img-1 { height: 240px; border-radius: 20px; overflow: hidden; transform: rotate(-4deg); box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15); }
+.e-about-img-2 { height: 320px; border-radius: 20px; overflow: hidden; transform: rotate(2deg);  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15); }
+.e-about-img-3 { height: 220px; border-radius: 20px; overflow: hidden; transform: rotate(-3deg); box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15); }
+.e-origin-section { padding: 120px 56px; position: relative; overflow: hidden; }
+.e-origin-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.e-values-section { padding: 120px 56px; }
+.e-values-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+.e-values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* ── Footer ──────────────────────────────────────────────────── */
+.e-footer { padding: 100px 56px 60px; position: relative; overflow: hidden; }
+.e-footer-input {
+  margin-top: 40px;
+  display: flex;
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 6px 6px 24px;
+  align-items: center;
+  width: 520px;
+  max-width: 100%;
+}
+.e-footer-bottom {
+  margin-top: 80px;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.e-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+
+/* ============================================================
+   MOBILE — max-width: 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Navbar */
+  .e-nav { padding: 16px 20px; }
+  .e-nav-links { display: none; }
+  .e-hamburger { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; }
+  .e-mobile-menu {
+    background: var(--cream);
+    border-top: 1px solid rgba(26,26,26,0.08);
+    box-shadow: 0 8px 24px rgba(26,26,26,0.08);
+  }
+
+  /* Landing hero */
+  .e-hero-grid { grid-template-columns: 1fr; padding: 0 20px 48px; gap: 0; }
+  .e-yellow-block { display: none; }
+  .e-waitlist-wrap { width: 100%; }
+  .e-phone-col { margin-top: 8px; }
+
+  /* Foodies */
+  .e-foodies-hero { padding: 24px 20px 60px; }
+  .e-foodies-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .e-foodie-card { width: 100%; max-width: 400px; transform: none; }
+  .e-how-section { padding: 60px 20px; }
+  .e-how-top { flex-direction: column; align-items: flex-start; margin-bottom: 36px; }
+  .e-steps-grid { grid-template-columns: 1fr; }
+  .e-test-section { padding: 60px 20px; }
+  .e-testimonials-grid { grid-template-columns: 1fr; }
+  .e-faq-section { padding: 60px 20px; }
+  .e-faq-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* About */
+  .e-about-hero { padding: 40px 20px 60px; }
+  .e-about-imgs { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 40px; }
+  .e-about-img-1 { height: 160px; transform: rotate(-2deg); }
+  .e-about-img-2 { height: 200px; transform: none; }
+  .e-about-img-3 { display: none; }
+  .e-origin-section { padding: 60px 20px; }
+  .e-origin-grid { grid-template-columns: 1fr; gap: 32px; }
+  .e-values-section { padding: 60px 20px; }
+  .e-values-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 36px; }
+  .e-values-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .e-footer { padding: 60px 20px 40px; }
+  .e-footer-input { width: 100%; }
+  .e-footer-bottom { flex-direction: column; gap: 12px; margin-top: 48px; }
+  .e-footer-links { gap: 16px; }
 }

@@ -20,34 +20,18 @@ export default function HomePage() {
         flexDirection: "column",
       }}
     >
-      {/* Amber hero block */}
+      {/* Amber hero block — hidden on mobile via CSS */}
       <div
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          bottom: -120,
-          width: "56%",
-          background: "var(--primary)",
-          borderRadius: "240px 0 0 0",
-          zIndex: 0,
-        }}
+        className="e-yellow-block"
+        style={{ background: "var(--primary)" }}
       />
 
       <Navbar />
 
-      {/* Hero */}
+      {/* Hero — 2-col desktop / 1-col mobile */}
       <div
-        style={{
-          position: "relative",
-          flex: 1,
-          display: "grid",
-          gridTemplateColumns: "1.05fr 0.95fr",
-          gap: 40,
-          padding: "0 56px 56px",
-          alignItems: "center",
-          zIndex: 1,
-        }}
+        className="e-hero-grid"
+        style={{ position: "relative", flex: 1, zIndex: 1 }}
       >
         {/* Left column */}
         <div style={{ position: "relative", zIndex: 2 }}>
@@ -83,7 +67,7 @@ export default function HomePage() {
             style={{
               fontFamily: "var(--font-space-grotesk), sans-serif",
               fontWeight: 700,
-              fontSize: "clamp(64px, 6vw, 96px)",
+              fontSize: "clamp(52px, 6vw, 96px)",
               lineHeight: 0.92,
               letterSpacing: "-0.04em",
               color: "var(--ink)",
@@ -110,7 +94,7 @@ export default function HomePage() {
 
           <p
             style={{
-              fontSize: 18,
+              fontSize: "clamp(15px, 1.8vw, 18px)",
               lineHeight: 1.5,
               color: "rgba(26,26,26,0.68)",
               maxWidth: 480,
@@ -123,18 +107,13 @@ export default function HomePage() {
             happen to be hungry.
           </p>
 
+          {/* Waitlist */}
           <div
             id="waitlist"
+            className="e-waitlist-wrap"
             style={{
-              display: "flex",
-              alignItems: "center",
               background: "#fff",
-              borderRadius: 999,
-              padding: "6px 6px 6px 22px",
-              boxShadow:
-                "0 2px 0 rgba(26,26,26,0.08), 0 0 0 2px rgba(26,26,26,0.06)",
-              width: 440,
-              maxWidth: "100%",
+              boxShadow: "0 2px 0 rgba(26,26,26,0.08), 0 0 0 2px rgba(26,26,26,0.06)",
             }}
           >
             <input
@@ -149,26 +128,27 @@ export default function HomePage() {
                 fontWeight: 500,
                 color: "var(--ink)",
                 fontFamily: "inherit",
+                minWidth: 0,
               }}
             />
             <button
               style={{
-                padding: "14px 24px",
+                padding: "14px 20px",
                 background: "var(--ink)",
                 color: "var(--primary)",
-                border: "none",
                 borderRadius: 999,
-                fontSize: 14,
+                fontSize: 13,
                 fontWeight: 700,
-                cursor: "pointer",
                 fontFamily: "inherit",
                 whiteSpace: "nowrap",
+                flexShrink: 0,
               }}
             >
               Join the waitlist
             </button>
           </div>
 
+          {/* Social proof */}
           <div
             style={{
               marginTop: 32,
@@ -177,6 +157,7 @@ export default function HomePage() {
               gap: 14,
               fontSize: 13,
               color: "rgba(26,26,26,0.7)",
+              flexWrap: "wrap",
             }}
           >
             <div style={{ display: "flex" }}>
@@ -203,22 +184,13 @@ export default function HomePage() {
               ))}
             </div>
             <span>
-              <b style={{ color: "var(--ink)" }}>4,200+</b> hungry humans
-              already in line
+              <b style={{ color: "var(--ink)" }}>4,200+</b> hungry humans already in line
             </span>
           </div>
         </div>
 
         {/* Right column — phone */}
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div className="e-phone-col">
           <div style={{ transform: "rotate(4deg)" }}>
             <PhoneMockup accent="#FFC528" />
           </div>
@@ -238,12 +210,7 @@ export default function HomePage() {
               zIndex: 3,
             }}
           >
-            <svg
-              viewBox="0 0 100 100"
-              width="110"
-              height="110"
-              style={{ position: "absolute", inset: 0 }}
-            >
+            <svg viewBox="0 0 100 100" width="110" height="110" style={{ position: "absolute", inset: 0 }}>
               <path
                 d={(() => {
                   const pts: string[] = [];
@@ -251,9 +218,7 @@ export default function HomePage() {
                   for (let i = 0; i < N * 2; i++) {
                     const a = (i / (N * 2)) * Math.PI * 2 - Math.PI / 2;
                     const r = i % 2 === 0 ? 48 : 40;
-                    pts.push(
-                      `${50 + Math.cos(a) * r},${50 + Math.sin(a) * r}`
-                    );
+                    pts.push(`${50 + Math.cos(a) * r},${50 + Math.sin(a) * r}`);
                   }
                   return "M" + pts.join(" L") + " Z";
                 })()}
@@ -278,17 +243,13 @@ export default function HomePage() {
                 letterSpacing: "-0.01em",
               }}
             >
-              NEW
-              <br />
-              in your
-              <br />
-              city!
+              NEW<br />in your<br />city!
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom doodle */}
+      {/* Doodle */}
       <div
         style={{
           position: "relative",
@@ -300,8 +261,7 @@ export default function HomePage() {
           letterSpacing: "0.08em",
         }}
       >
-        ✦ 12,400+ restaurants &nbsp;·&nbsp; 38 cities &nbsp;·&nbsp; 0 paid
-        reviews
+        ✦ 12,400+ restaurants &nbsp;·&nbsp; 38 cities &nbsp;·&nbsp; 0 paid reviews
       </div>
 
       <FooterCTA

@@ -3,30 +3,10 @@ import FoodPlaceholder from "@/components/FoodPlaceholder";
 import FooterCTA from "@/components/FooterCTA";
 
 const values = [
-  {
-    n: "01",
-    title: "No paid reviews. Ever.",
-    text: "The second money touches a review, trust dies. Restaurants can partner with us on events, menus, and tastings — never on ratings.",
-    featured: true,
-  },
-  {
-    n: "02",
-    title: "Short, honest, useful.",
-    text: "We'd rather have a one-liner that helps you decide than a thousand-word essay nobody reads. Real takes > review theatre.",
-    featured: false,
-  },
-  {
-    n: "03",
-    title: "Built for the hungry, not the algorithm.",
-    text: "We don't push dishes because they pay. We rank by what the people actually eating near you are raving about this week.",
-    featured: false,
-  },
-  {
-    n: "04",
-    title: "Small, local, loud.",
-    text: "A hole-in-the-wall with five seats should get the same spotlight as a chain with five hundred. Often more.",
-    featured: true,
-  },
+  { n: "01", title: "No paid reviews. Ever.", text: "The second money touches a review, trust dies. Restaurants can partner with us on events, menus, and tastings — never on ratings.", featured: true },
+  { n: "02", title: "Short, honest, useful.", text: "We'd rather have a one-liner that helps you decide than a thousand-word essay nobody reads. Real takes > review theatre.", featured: false },
+  { n: "03", title: "Built for the hungry, not the algorithm.", text: "We don't push dishes because they pay. We rank by what the people actually eating near you are raving about this week.", featured: false },
+  { n: "04", title: "Small, local, loud.", text: "A hole-in-the-wall with five seats should get the same spotlight as a chain with five hundred. Often more.", featured: true },
 ];
 
 export default function AboutPage() {
@@ -43,13 +23,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* HERO MANIFESTO */}
-      <div
-        style={{
-          position: "relative",
-          padding: "80px 56px 120px",
-          textAlign: "center",
-        }}
-      >
+      <div className="e-about-hero">
         <div
           style={{
             fontFamily: "ui-monospace, Menlo, monospace",
@@ -66,7 +40,7 @@ export default function AboutPage() {
         <h1
           style={{
             fontFamily: "var(--font-space-grotesk), sans-serif",
-            fontSize: "clamp(56px, 6.5vw, 92px)",
+            fontSize: "clamp(40px, 6.5vw, 92px)",
             fontWeight: 700,
             letterSpacing: "-0.04em",
             lineHeight: 0.98,
@@ -90,60 +64,22 @@ export default function AboutPage() {
           we
           <br />
           kept{" "}
-          <span
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontStyle: "italic",
-              fontWeight: 400,
-            }}
-          >
+          <span style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic", fontWeight: 400 }}>
             wishing existed
           </span>
           <br />
           at 9pm on a Friday.
         </h1>
 
-        {/* Image row */}
-        <div
-          style={{
-            marginTop: 80,
-            display: "grid",
-            gridTemplateColumns: "1fr 1.3fr 1fr",
-            gap: 20,
-            alignItems: "end",
-          }}
-        >
-          <div
-            style={{
-              height: 240,
-              borderRadius: 20,
-              overflow: "hidden",
-              transform: "rotate(-4deg)",
-              boxShadow: "0 20px 40px -15px rgba(0,0,0,0.15)",
-            }}
-          >
+        {/* Image row — 2-col on mobile, 3-col on desktop */}
+        <div className="e-about-imgs">
+          <div className="e-about-img-1">
             <FoodPlaceholder label="co-founders · 2024" tone="warm" />
           </div>
-          <div
-            style={{
-              height: 320,
-              borderRadius: 20,
-              overflow: "hidden",
-              transform: "rotate(2deg)",
-              boxShadow: "0 20px 40px -15px rgba(0,0,0,0.15)",
-            }}
-          >
+          <div className="e-about-img-2">
             <FoodPlaceholder label="first meetup · bandra" tone="green" />
           </div>
-          <div
-            style={{
-              height: 220,
-              borderRadius: 20,
-              overflow: "hidden",
-              transform: "rotate(-3deg)",
-              boxShadow: "0 20px 40px -15px rgba(0,0,0,0.15)",
-            }}
-          >
+          <div className="e-about-img-3">
             <FoodPlaceholder label="early sketches" tone="rose" />
           </div>
         </div>
@@ -151,13 +87,8 @@ export default function AboutPage() {
 
       {/* ORIGIN STORY */}
       <div
-        style={{
-          padding: "120px 56px",
-          background: "var(--ink)",
-          color: "var(--cream)",
-          position: "relative",
-          overflow: "hidden",
-        }}
+        className="e-origin-section"
+        style={{ background: "var(--ink)", color: "var(--cream)", overflow: "hidden", position: "relative" }}
       >
         {/* Ambient blob */}
         <div
@@ -173,15 +104,7 @@ export default function AboutPage() {
           }}
         />
 
-        <div
-          style={{
-            position: "relative",
-            display: "grid",
-            gridTemplateColumns: "0.4fr 1fr",
-            gap: 80,
-            alignItems: "start",
-          }}
-        >
+        <div className="e-origin-grid">
           <div>
             <div
               style={{
@@ -198,46 +121,31 @@ export default function AboutPage() {
             <h2
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
-                fontSize: "clamp(36px, 4vw, 56px)",
+                fontSize: "clamp(32px, 4vw, 56px)",
                 fontWeight: 700,
                 letterSpacing: "-0.035em",
                 lineHeight: 0.95,
                 margin: 0,
               }}
             >
-              It started
-              <br />
-              with a bad
-              <br />
-              biryani.
+              It started<br />with a bad<br />biryani.
             </h2>
           </div>
 
-          <div
-            style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(253,251,243,0.78)" }}
-          >
+          <div style={{ fontSize: "clamp(15px, 1.6vw, 19px)", lineHeight: 1.65, color: "rgba(253,251,243,0.78)" }}>
             <p style={{ marginBottom: 24 }}>
               In the summer of 2024, our co-founder{" "}
-              <b style={{ color: "var(--cream)" }}>Rhea</b> was visiting a
-              friend in a new city, hungry, a little lost, and staring at four
-              open tabs of review sites. The one with the most stars led her to
-              a soggy, overpriced biryani in a restaurant that clearly paid for
-              its ranking. The one with the honest takes was impossible to
-              search.
+              <b style={{ color: "var(--cream)" }}>Rhea</b> was visiting a friend in a new city, hungry, a little lost, and staring at four open tabs of review sites. The one with the most stars led her to a soggy, overpriced biryani in a restaurant that clearly paid for its ranking. The one with the honest takes was impossible to search.
             </p>
             <p style={{ marginBottom: 24 }}>
               That night, over cold leftovers, she and{" "}
-              <b style={{ color: "var(--cream)" }}>Ishaan</b> sketched the
-              first version of Eatables on a dosa-stained napkin: a map of
-              dishes — not restaurants — rated by people who actually ate there,
-              with zero paid placements and reviews short enough to read while
-              your food got cold.
+              <b style={{ color: "var(--cream)" }}>Ishaan</b> sketched the first version of Eatables on a dosa-stained napkin: a map of dishes — not restaurants — rated by people who actually ate there, with zero paid placements and reviews short enough to read while your food got cold.
             </p>
 
             <div
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
-                fontSize: "clamp(24px, 2.5vw, 40px)",
+                fontSize: "clamp(20px, 2.5vw, 40px)",
                 fontWeight: 500,
                 fontStyle: "italic",
                 letterSpacing: "-0.02em",
@@ -249,45 +157,25 @@ export default function AboutPage() {
                 borderBottom: "1.5px solid var(--primary)",
               }}
             >
-              &ldquo;If the review doesn&apos;t help you decide in ten seconds,
-              it&apos;s not a review. It&apos;s a blog.&rdquo;
+              &ldquo;If the review doesn&apos;t help you decide in ten seconds, it&apos;s not a review. It&apos;s a blog.&rdquo;
             </div>
 
             <p style={{ marginBottom: 24 }}>
               Two years, a tiny team, and{" "}
               <b style={{ color: "var(--cream)" }}>12,400+ hand-vetted restaurants</b>{" "}
-              later, we&apos;re still building the same thing — a pocket-sized
-              food scout that treats your hunger like a real problem worth
-              solving, and your taste like something worth sharing.
+              later, we&apos;re still building the same thing — a pocket-sized food scout that treats your hunger like a real problem worth solving, and your taste like something worth sharing.
             </p>
             <p style={{ marginBottom: 0 }}>
-              We&apos;re a team of eight in Mumbai, previously at Zomato,
-              Swiggy and Airbnb. We eat too much. We argue about vada pav a
-              lot. And we think the best thing you&apos;re going to eat this
-              year is probably three blocks from where you&apos;re sitting —
-              you just haven&apos;t found it yet.
+              We&apos;re a team of eight in Mumbai, previously at Zomato, Swiggy and Airbnb. We eat too much. We argue about vada pav a lot. And we think the best thing you&apos;re going to eat this year is probably three blocks from where you&apos;re sitting — you just haven&apos;t found it yet.
             </p>
 
-            <div
-              style={{
-                marginTop: 48,
-                display: "flex",
-                alignItems: "center",
-                gap: 20,
-              }}
-            >
+            <div style={{ marginTop: 48, display: "flex", alignItems: "center", gap: 20 }}>
               <div
                 style={{
-                  width: 72,
-                  height: 72,
-                  borderRadius: 36,
+                  width: 72, height: 72, borderRadius: 36,
                   background: "#E8D4A0",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 24,
-                  fontWeight: 700,
-                  color: "#5A4A2A",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: 24, fontWeight: 700, color: "#5A4A2A",
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                   flexShrink: 0,
                 }}
@@ -295,23 +183,10 @@ export default function AboutPage() {
                 R
               </div>
               <div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-space-grotesk), sans-serif",
-                    fontSize: 20,
-                    fontWeight: 700,
-                    color: "var(--cream)",
-                  }}
-                >
+                <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, color: "var(--cream)" }}>
                   Rhea Kapoor
                 </div>
-                <div
-                  style={{
-                    fontSize: 14,
-                    color: "rgba(253,251,243,0.6)",
-                    marginTop: 2,
-                  }}
-                >
+                <div style={{ fontSize: 14, color: "rgba(253,251,243,0.6)", marginTop: 2 }}>
                   Co-founder &amp; CEO · Eats everything twice
                 </div>
               </div>
@@ -321,16 +196,8 @@ export default function AboutPage() {
       </div>
 
       {/* MISSION + VALUES */}
-      <div style={{ padding: "120px 56px", background: "var(--cream)", position: "relative" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "end",
-            marginBottom: 60,
-            gap: 40,
-          }}
-        >
+      <div className="e-values-section" style={{ background: "var(--cream)", position: "relative" }}>
+        <div className="e-values-header">
           <div>
             <div
               style={{
@@ -347,7 +214,7 @@ export default function AboutPage() {
             <h2
               style={{
                 fontFamily: "var(--font-space-grotesk), sans-serif",
-                fontSize: "clamp(48px, 5vw, 72px)",
+                fontSize: "clamp(40px, 5vw, 72px)",
                 fontWeight: 700,
                 letterSpacing: "-0.035em",
                 lineHeight: 0.95,
@@ -355,34 +222,16 @@ export default function AboutPage() {
                 maxWidth: 700,
               }}
             >
-              Four things
-              <br />
-              we will
-              <br />
-              die on a hill for.
+              Four things<br />we will<br />die on a hill for.
             </h2>
           </div>
-          <div
-            style={{
-              fontSize: 17,
-              color: "rgba(26,26,26,0.6)",
-              maxWidth: 360,
-              lineHeight: 1.55,
-            }}
-          >
+          <div style={{ fontSize: 17, color: "rgba(26,26,26,0.6)", maxWidth: 360, lineHeight: 1.55 }}>
             Everything we build, ship and say gets stress-tested against these.
-            If something on Eatables ever feels off, it probably broke one of
-            them — tell us.
+            If something on Eatables ever feels off, it probably broke one of them — tell us.
           </div>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: 20,
-          }}
-        >
+        <div className="e-values-grid">
           {values.map((v) => (
             <div
               key={v.n}
@@ -398,36 +247,13 @@ export default function AboutPage() {
                 minHeight: 280,
               }}
             >
-              <div
-                style={{
-                  fontFamily: "ui-monospace, Menlo, monospace",
-                  fontSize: 12,
-                  letterSpacing: "0.2em",
-                  color: "rgba(26,26,26,0.55)",
-                }}
-              >
+              <div style={{ fontFamily: "ui-monospace, Menlo, monospace", fontSize: 12, letterSpacing: "0.2em", color: "rgba(26,26,26,0.55)" }}>
                 {v.n}
               </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-space-grotesk), sans-serif",
-                  fontSize: 32,
-                  fontWeight: 700,
-                  letterSpacing: "-0.02em",
-                  lineHeight: 1.05,
-                }}
-              >
+              <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: "clamp(22px, 2.5vw, 32px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.05 }}>
                 {v.title}
               </div>
-              <div
-                style={{
-                  fontSize: 15,
-                  lineHeight: 1.6,
-                  color: "rgba(26,26,26,0.75)",
-                }}
-              >
-                {v.text}
-              </div>
+              <div style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,26,0.75)" }}>{v.text}</div>
             </div>
           ))}
         </div>

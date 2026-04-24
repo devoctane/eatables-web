@@ -10,13 +10,8 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
 
   return (
     <footer
-      style={{
-        padding: "100px 56px 60px",
-        background: "var(--primary)",
-        color: "var(--ink)",
-        position: "relative",
-        overflow: "hidden",
-      }}
+      className="e-footer"
+      style={{ background: "var(--primary)", color: "var(--ink)" }}
     >
       <div
         style={{
@@ -29,10 +24,11 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
       >
         {tag}
       </div>
+
       <h2
         style={{
           fontFamily: "var(--font-space-grotesk), sans-serif",
-          fontSize: "clamp(72px, 8vw, 120px)",
+          fontSize: "clamp(52px, 8vw, 120px)",
           fontWeight: 700,
           letterSpacing: "-0.05em",
           lineHeight: 0.9,
@@ -46,21 +42,15 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
           </span>
         ))}
       </h2>
-      <p style={{ fontSize: 19, marginTop: 24, maxWidth: 520, lineHeight: 1.5 }}>{sub}</p>
+
+      <p style={{ fontSize: "clamp(15px, 1.8vw, 19px)", marginTop: 24, maxWidth: 520, lineHeight: 1.5 }}>
+        {sub}
+      </p>
 
       <div
         id="waitlist"
-        style={{
-          marginTop: 40,
-          display: "flex",
-          background: "#fff",
-          borderRadius: 999,
-          padding: "6px 6px 6px 24px",
-          alignItems: "center",
-          width: 520,
-          maxWidth: "100%",
-          boxShadow: "0 6px 0 rgba(26,26,26,0.12)",
-        }}
+        className="e-footer-input"
+        style={{ boxShadow: "0 6px 0 rgba(26,26,26,0.12)" }}
       >
         <input
           type="email"
@@ -73,17 +63,19 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
             fontSize: 15,
             fontWeight: 500,
             color: "var(--ink)",
+            minWidth: 0,
           }}
         />
         <button
           style={{
-            padding: "14px 24px",
+            padding: "14px 20px",
             background: "var(--ink)",
             color: "var(--primary)",
             borderRadius: 999,
-            fontSize: 14,
+            fontSize: 13,
             fontWeight: 700,
             whiteSpace: "nowrap",
+            flexShrink: 0,
           }}
         >
           {btnLabel}
@@ -91,20 +83,11 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
       </div>
 
       <div
-        style={{
-          marginTop: 80,
-          paddingTop: 28,
-          borderTop: "1.5px solid rgba(26,26,26,0.15)",
-          display: "flex",
-          justifyContent: "space-between",
-          fontSize: 13,
-          fontWeight: 500,
-          flexWrap: "wrap",
-          gap: 16,
-        }}
+        className="e-footer-bottom"
+        style={{ borderTop: "1.5px solid rgba(26,26,26,0.15)" }}
       >
         <span>© 2026 Eatables · Made hungry in Mumbai</span>
-        <span style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
+        <span className="e-footer-links">
           <span>Privacy</span>
           <span>Terms</span>
           <span>Press kit</span>
