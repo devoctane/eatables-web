@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #FFC528;
+  --ink: #1A1A1A;
+  --cream: #FDFBF3;
+  --accent-bg: #FFF3E0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
