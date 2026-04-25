@@ -6,9 +6,7 @@ import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 
 const links = [
-  { label: "How it works", href: "/#how-it-works" },
   { label: "For foodies", href: "/foodies" },
-  { label: "For restaurants", href: "/#restaurants" },
   { label: "About", href: "/about" },
 ];
 

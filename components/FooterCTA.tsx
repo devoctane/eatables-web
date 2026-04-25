@@ -86,12 +86,10 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
         className="e-footer-bottom"
         style={{ borderTop: "1.5px solid rgba(26,26,26,0.15)" }}
       >
-        <span>© 2026 Eatables · Made hungry in Mumbai</span>
+        <span>© 2026 Eatables · Made hungry</span>
         <span className="e-footer-links">
-          <span>Privacy</span>
-          <span>Terms</span>
-          <span>Press kit</span>
-          <span>hi@eatables.app</span>
+          <a target="_blank" href="https://www.eatables.app/docs/privacy-policy">Privacy & Terms</a>
+            <a href="mailto:hello@eatables.app">hello@eatables.app</a>
         </span>
       </div>
     </footer>

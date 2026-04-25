@@ -22,38 +22,37 @@ const steps = [
   {
     n: "03",
     title: "Earn your stripes.",
-    text: "Build a following, unlock foodie badges, and get early tastings from restaurants that want your take before it drops.",
+    text: "Unlock foodie badges and get early tastings from restaurants that want your take before it drops.",
     tone: "rose" as const,
   },
 ];
 
-const testimonials = [
-  {
-    quote: "I found my favourite dumpling spot by tapping three buttons. That never happens.",
-    name: "Priya K.",
-    handle: "@priyaeats · 2.4k followers",
-    avatar: "#E8D4A0",
-  },
-  {
-    quote: "Finally, a review app that doesn't read like a Yelp novel. Short, honest, delicious.",
-    name: "Arjun M.",
-    handle: "@forktofork · 8.1k followers",
-    avatar: "#F5D6CC",
-  },
-  {
-    quote: "I got invited to three tasting menus in my first month. On a student budget. Hello?",
-    name: "Sana J.",
-    handle: "@sanasnacks · 1.2k followers",
-    avatar: "#D9E5C8",
-  },
-];
+// const testimonials = [
+//   {
+//     quote: "I found my favourite dumpling spot by tapping three buttons. That never happens.",
+//     name: "Priya K.",
+//     handle: "@priyaeats · 2.4k followers",
+//     avatar: "#E8D4A0",
+//   },
+//   {
+//     quote: "Finally, a review app that doesn't read like a Yelp novel. Short, honest, delicious.",
+//     name: "Arjun M.",
+//     handle: "@forktofork · 8.1k followers",
+//     avatar: "#F5D6CC",
+//   },
+//   {
+//     quote: "I got invited to three tasting menus in my first month. On a student budget. Hello?",
+//     name: "Sana J.",
+//     handle: "@sanasnacks · 1.2k followers",
+//     avatar: "#D9E5C8",
+//   },
+// ];
 
 const faqs = [
-  { q: "Do I need a huge following to join?", a: "Nope. We want hungry humans with good taste, not influencer resumés. If you love food and can write one honest sentence, you're in." },
-  { q: "How much does it cost?", a: "Free. Forever. We make money from restaurant partnerships — never from your reviews, never from hidden placements." },
-  { q: "What do I get for being a foodie?", a: "Early access to the app, a verified foodie badge, invites to tastings with partner restaurants, and a real creator dashboard once you hit 500 followers." },
-  { q: "Can I share my reviews on Instagram / TikTok?", a: "Yes, one tap. We generate a nice card for stories and a vertical clip for reels. Bring your people." },
-  { q: "When does it launch?", a: "Summer 2026. Waitlist members get in two weeks early, with their city unlocked first." },
+  { q: "How is Eatables different from Yelp or Google Reviews?", a: "Eatables focuses on short, honest reviews from real foodies, not long essays. We prioritize authenticity and partner with restaurants for exclusive perks." },
+  { q: "Do I need to be an influencer to join?", a: "Not at all. We welcome anyone who loves food and can share genuine opinions." },
+  { q: "What do I get as a verified foodie?", a: "Early app access, exclusive badges, invites to restaurant tastings, and a creator dashboard for managing your reviews." },
+  { q: "When can I start using Eatables?", a: "Coming soon. Join the waitlist for early access in your city." },
 ];
 
 export default function FoodiesPage() {
@@ -150,13 +149,14 @@ export default function FoodiesPage() {
                 marginBottom: 36,
               }}
             >
-              Eatables turns your meals into a feed worth following. Drop honest
-              reviews, rack up followers, and get invited to the good stuff —
+              Eatables turns your meals into a portfolio worth showcasing. Drop honest
+              reviews, and get invited to the good stuff —
               all from your phone, between bites.
             </p>
 
             <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-              <button
+              <a
+                href="/#waitlist"
                 style={{
                   padding: "16px 24px",
                   background: "var(--ink)",
@@ -167,25 +167,13 @@ export default function FoodiesPage() {
                   border: "none",
                   fontFamily: "inherit",
                   cursor: "pointer",
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
                 }}
               >
                 Become an Eatables foodie
-              </button>
-              <button
-                style={{
-                  padding: "16px 22px",
-                  background: "transparent",
-                  color: "var(--ink)",
-                  borderRadius: 999,
-                  fontSize: 15,
-                  fontWeight: 600,
-                  border: "1.5px solid var(--ink)",
-                  fontFamily: "inherit",
-                  cursor: "pointer",
-                }}
-              >
-                See how it works
-              </button>
+              </a>
             </div>
           </div>
 
@@ -233,13 +221,13 @@ export default function FoodiesPage() {
                     flexShrink: 0,
                   }}
                 >
-                  RK
+                  S
                 </div>
                 <div>
                   <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, letterSpacing: "-0.01em" }}>
-                    Riya Kapoor
+                    Sarah
                   </div>
-                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>@riyabites · Mumbai</div>
+                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>@sarah</div>
                 </div>
               </div>
 
@@ -258,7 +246,7 @@ export default function FoodiesPage() {
                   borderBottom: "1px solid rgba(26,26,26,0.08)",
                 }}
               >
-                {[{ num: "412", label: "Reviews" }, { num: "2.4k", label: "Followers" }, { num: "18", label: "Badges" }].map((s) => (
+                {[{ num: "412", label: "Reviews" }, { num: "37", label: "Restaurants" }, { num: "18", label: "Badges" }].map((s) => (
                   <div key={s.label} style={{ display: "flex", flexDirection: "column" }}>
                     <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em" }}>
                       {s.num}
@@ -292,7 +280,7 @@ export default function FoodiesPage() {
       </div>
 
       {/* HOW IT WORKS */}
-      <div
+      {/* <div
         className="e-how-section"
         style={{ background: "var(--ink)", color: "var(--cream)", position: "relative", overflow: "hidden" }}
       >
@@ -371,9 +359,9 @@ export default function FoodiesPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
-      {/* TESTIMONIALS */}
+      {/* TESTIMONIALS
       <div className="e-test-section" style={{ background: "var(--cream)", position: "relative" }}>
         <div
           style={{
@@ -467,7 +455,7 @@ export default function FoodiesPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* FAQ */}
       <div className="e-faq-section" style={{ background: "var(--accent-bg)", position: "relative" }}>
@@ -498,7 +486,7 @@ export default function FoodiesPage() {
               The stuff<br />you&apos;re about<br />to ask.
             </h2>
             <div style={{ fontSize: 16, color: "rgba(26,26,26,0.65)", lineHeight: 1.55, marginTop: 20 }}>
-              Short answers. If something&apos;s still unclear, email <b>hi@eatables.app</b> — a human will reply, promise.
+              Short answers. If something&apos;s still unclear, email <b><a href="mailto:support@eatables.app">support@eatables.app</a></b> — a human will reply, promise.
             </div>
           </div>
 
@@ -556,7 +544,7 @@ export default function FoodiesPage() {
       <FooterCTA
         tag="● Last call"
         headline={"Come eat\nwith us."}
-        sub="Get in early. First 10,000 foodies unlock the OG badge, a free year of pro features, and a spot on the founding wall."
+        sub="Get in early. First 100 foodies unlock the OG badge, a free year of pro features, and a spot on the founding wall."
         btnLabel="Count me in →"
       />
     </div>
