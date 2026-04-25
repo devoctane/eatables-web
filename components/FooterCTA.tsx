@@ -86,7 +86,7 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
         className="e-footer-bottom"
         style={{ borderTop: "1.5px solid rgba(26,26,26,0.15)" }}
       >
-        <span>© 2026 Eatables · Made hungry in Mumbai</span>
+        <span>© 2026 Eatables · Made hungry in Mangalore</span>
         <span className="e-footer-links">
           <span>Privacy</span>
           <span>Terms</span>

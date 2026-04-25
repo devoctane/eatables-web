@@ -128,18 +128,17 @@ export default function AboutPage() {
                 margin: 0,
               }}
             >
-              It started<br />with a bad<br />biryani.
+              It started<br />with a hungry<br />traveler.
             </h2>
           </div>
 
           <div style={{ fontSize: "clamp(15px, 1.6vw, 19px)", lineHeight: 1.65, color: "rgba(253,251,243,0.78)" }}>
             <p style={{ marginBottom: 24 }}>
               In the summer of 2024, our co-founder{" "}
-              <b style={{ color: "var(--cream)" }}>Rhea</b> was visiting a friend in a new city, hungry, a little lost, and staring at four open tabs of review sites. The one with the most stars led her to a soggy, overpriced biryani in a restaurant that clearly paid for its ranking. The one with the honest takes was impossible to search.
+              <b style={{ color: "var(--cream)" }}>Sarah</b> was visiting Mangalore, famished, navigating a language barrier, and desperately swiping through every food app on her phone. She wanted to dive into the city's diverse cuisines, but none of the traditional platforms were actually helpful. Every search just led to more frustration, leaving her feeling completely disconnected from the local food scene.
             </p>
             <p style={{ marginBottom: 24 }}>
-              That night, over cold leftovers, she and{" "}
-              <b style={{ color: "var(--cream)" }}>Ishaan</b> sketched the first version of Eatables on a dosa-stained napkin: a map of dishes — not restaurants — rated by people who actually ate there, with zero paid placements and reviews short enough to read while your food got cold.
+              Meanwhile, somewhere in that exact same city, few developers were having a breakthrough. Frustrated by the gap between incredible local food and the people who wanted to eat it, one pitched a simple concept: "I've got an idea for our project. An app that actually helps you discover the best cuisines nearby." The response was an immediate, enthusiastic "Cooooool." That day, Eatables was born.
             </p>
 
             <div
@@ -161,12 +160,10 @@ export default function AboutPage() {
             </div>
 
             <p style={{ marginBottom: 24 }}>
-              Two years, a tiny team, and{" "}
-              <b style={{ color: "var(--cream)" }}>12,400+ hand-vetted restaurants</b>{" "}
-              later, we&apos;re still building the same thing — a pocket-sized food scout that treats your hunger like a real problem worth solving, and your taste like something worth sharing.
+              Today, we are still building that exact concept—a feature-rich food discovery and review platform that acts as your personal travel companion. We treat your search for authentic, diverse food like a real problem worth solving, ensuring you never have to settle for a disappointing meal in an unfamiliar city.
             </p>
             <p style={{ marginBottom: 0 }}>
-              We&apos;re a team of eight in Mumbai, previously at Zomato, Swiggy and Airbnb. We eat too much. We argue about vada pav a lot. And we think the best thing you&apos;re going to eat this year is probably three blocks from where you&apos;re sitting — you just haven&apos;t found it yet.
+              We’re a passionate team based right here in Mangalore. We love our local flavors, we get a little too excited during brainstorming sessions, and we firmly believe the best culinary experience of your trip is waiting just down the street—you just need the right app to find it.
             </p>
 
             <div style={{ marginTop: 48, display: "flex", alignItems: "center", gap: 20 }}>
@@ -180,11 +177,11 @@ export default function AboutPage() {
                   flexShrink: 0,
                 }}
               >
-                R
+                O
               </div>
               <div>
                 <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, color: "var(--cream)" }}>
-                  Rhea Kapoor
+                  Octane Founders
                 </div>
                 <div style={{ fontSize: 14, color: "rgba(253,251,243,0.6)", marginTop: 2 }}>
                   Co-founder &amp; CEO · Eats everything twice

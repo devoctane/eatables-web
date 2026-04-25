@@ -60,7 +60,7 @@ export default function HomePage() {
                 display: "inline-block",
               }}
             />
-            Coming soon · Launching summer &apos;26
+            Coming soon · In Mangalore
           </div>
 
           <h1
@@ -243,25 +243,10 @@ export default function HomePage() {
                 letterSpacing: "-0.01em",
               }}
             >
-              NEW<br />in your<br />city!
+              NEW<br />in<br />Mangalore!
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Doodle */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 1,
-          padding: "0 56px 40px",
-          fontFamily: "ui-monospace, Menlo, monospace",
-          fontSize: 11,
-          color: "rgba(26,26,26,0.45)",
-          letterSpacing: "0.08em",
-        }}
-      >
-        ✦ 12,400+ restaurants &nbsp;·&nbsp; 38 cities &nbsp;·&nbsp; 0 paid reviews
       </div>
 
       <FooterCTA

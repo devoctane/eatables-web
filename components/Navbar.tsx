@@ -6,9 +6,7 @@ import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 
 const links = [
-  { label: "How it works", href: "/#how-it-works" },
   { label: "For foodies", href: "/foodies" },
-  { label: "For restaurants", href: "/#restaurants" },
   { label: "About", href: "/about" },
 ];
 
@@ -57,7 +55,7 @@ export default function Navbar() {
 
       {/* Desktop CTA */}
       <Link
-        href="/#waitlist"
+        href="/"
         className="e-nav-cta"
         style={{
           padding: "10px 20px",

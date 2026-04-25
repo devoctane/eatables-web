@@ -233,13 +233,13 @@ export default function FoodiesPage() {
                     flexShrink: 0,
                   }}
                 >
-                  RK
+                  S
                 </div>
                 <div>
                   <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, letterSpacing: "-0.01em" }}>
-                    Riya Kapoor
+                    Sarah
                   </div>
-                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>@riyabites · Mumbai</div>
+                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>@sarah · Mangalore</div>
                 </div>
               </div>
 
