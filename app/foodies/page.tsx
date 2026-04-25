@@ -22,7 +22,7 @@ const steps = [
   {
     n: "03",
     title: "Earn your stripes.",
-    text: "Build a following, unlock foodie badges, and get early tastings from restaurants that want your take before it drops.",
+    text: "Unlock foodie badges, get early access to new restaurants, and become part of a community of genuine food lovers who trust your taste.",
     tone: "rose" as const,
   },
 ];
@@ -31,29 +31,28 @@ const testimonials = [
   {
     quote: "I found my favourite dumpling spot by tapping three buttons. That never happens.",
     name: "Priya K.",
-    handle: "@priyaeats · 2.4k followers",
+    handle: "@priyaeats",
     avatar: "#E8D4A0",
   },
   {
     quote: "Finally, a review app that doesn't read like a Yelp novel. Short, honest, delicious.",
     name: "Arjun M.",
-    handle: "@forktofork · 8.1k followers",
+    handle: "@forktofork",
     avatar: "#F5D6CC",
   },
   {
     quote: "I got invited to three tasting menus in my first month. On a student budget. Hello?",
     name: "Sana J.",
-    handle: "@sanasnacks · 1.2k followers",
+    handle: "@sanasnacks",
     avatar: "#D9E5C8",
   },
 ];
 
 const faqs = [
-  { q: "Do I need a huge following to join?", a: "Nope. We want hungry humans with good taste, not influencer resumés. If you love food and can write one honest sentence, you're in." },
   { q: "How much does it cost?", a: "Free. Forever. We make money from restaurant partnerships — never from your reviews, never from hidden placements." },
-  { q: "What do I get for being a foodie?", a: "Early access to the app, a verified foodie badge, invites to tastings with partner restaurants, and a real creator dashboard once you hit 500 followers." },
-  { q: "Can I share my reviews on Instagram / TikTok?", a: "Yes, one tap. We generate a nice card for stories and a vertical clip for reels. Bring your people." },
-  { q: "When does it launch?", a: "Summer 2026. Waitlist members get in two weeks early, with their city unlocked first." },
+  { q: "Do I need any special qualifications?", a: "Nope. We want hungry humans with good taste and honest opinions. If you love food and can write one genuine take, you're in." },
+  { q: "What do I get for being a foodie?", a: "Early access to the app, a verified foodie badge, invites to tastings with partner restaurants, and special perks from restaurants that value your honest reviews." },
+  { q: "When does it launch?", a: "Coming soon. Waitlist members will get early access, so join now to be among the first!" },
 ];
 
 export default function FoodiesPage() {
@@ -150,13 +149,21 @@ export default function FoodiesPage() {
                 marginBottom: 36,
               }}
             >
-              Eatables turns your meals into a feed worth following. Drop honest
-              reviews, rack up followers, and get invited to the good stuff —
+              Eatables is your personal food guide. Drop honest
+              reviews, discover hidden gems, and connect with other genuine food lovers —
               all from your phone, between bites.
             </p>
 
             <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
               <button
+                onClick={() => {
+                  const waitlistElement = document.getElementById("waitlist");
+                  if (waitlistElement) {
+                    waitlistElement.scrollIntoView({ behavior: "smooth" });
+                    const input = waitlistElement.querySelector("input");
+                    if (input) input.focus();
+                  }
+                }}
                 style={{
                   padding: "16px 24px",
                   background: "var(--ink)",
@@ -170,21 +177,6 @@ export default function FoodiesPage() {
                 }}
               >
                 Become an Eatables foodie
-              </button>
-              <button
-                style={{
-                  padding: "16px 22px",
-                  background: "transparent",
-                  color: "var(--ink)",
-                  borderRadius: 999,
-                  fontSize: 15,
-                  fontWeight: 600,
-                  border: "1.5px solid var(--ink)",
-                  fontFamily: "inherit",
-                  cursor: "pointer",
-                }}
-              >
-                See how it works
               </button>
             </div>
           </div>
@@ -239,7 +231,7 @@ export default function FoodiesPage() {
                   <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, letterSpacing: "-0.01em" }}>
                     Sarah
                   </div>
-                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>@sarah · Mangalore</div>
+                  <div style={{ fontSize: 13, color: "#8A7F5F" }}>@sarah</div>
                 </div>
               </div>
 
@@ -258,7 +250,7 @@ export default function FoodiesPage() {
                   borderBottom: "1px solid rgba(26,26,26,0.08)",
                 }}
               >
-                {[{ num: "412", label: "Reviews" }, { num: "2.4k", label: "Followers" }, { num: "18", label: "Badges" }].map((s) => (
+                {[{ num: "400+", label: "Reviews" }, { num: "80+", label: "Discoveries" }, { num: "15+", label: "Badges" }].map((s) => (
                   <div key={s.label} style={{ display: "flex", flexDirection: "column" }}>
                     <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em" }}>
                       {s.num}
@@ -373,7 +365,7 @@ export default function FoodiesPage() {
         </div>
       </div>
 
-      {/* TESTIMONIALS */}
+      {/* TESTIMONIALS
       <div className="e-test-section" style={{ background: "var(--cream)", position: "relative" }}>
         <div
           style={{
@@ -467,7 +459,7 @@ export default function FoodiesPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* FAQ */}
       <div className="e-faq-section" style={{ background: "var(--accent-bg)", position: "relative" }}>
@@ -498,7 +490,7 @@ export default function FoodiesPage() {
               The stuff<br />you&apos;re about<br />to ask.
             </h2>
             <div style={{ fontSize: 16, color: "rgba(26,26,26,0.65)", lineHeight: 1.55, marginTop: 20 }}>
-              Short answers. If something&apos;s still unclear, email <b>hi@eatables.app</b> — a human will reply, promise.
+              Short answers. If something's still unclear, email <b>support@eatables.app</b> — a human will reply, promise.
             </div>
           </div>
 
@@ -556,7 +548,7 @@ export default function FoodiesPage() {
       <FooterCTA
         tag="● Last call"
         headline={"Come eat\nwith us."}
-        sub="Get in early. First 10,000 foodies unlock the OG badge, a free year of pro features, and a spot on the founding wall."
+        sub="Get in early. First 100 foodies unlock the OG badge, a free year of pro features, and a spot on the founding wall."
         btnLabel="Count me in →"
       />
     </div>

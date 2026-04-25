@@ -60,7 +60,7 @@ export default function HomePage() {
                 display: "inline-block",
               }}
             />
-            Coming soon · In Mangalore
+            Coming soon
           </div>
 
           <h1
@@ -103,7 +103,7 @@ export default function HomePage() {
             }}
           >
             Eatables is the pocket-sized food scout that hunts down legit
-            restaurants, hidden gems and holy-sh*t-good dishes — wherever you
+            restaurants, hidden gems and delicious dishes — wherever you
             happen to be hungry.
           </p>
 
@@ -149,7 +149,7 @@ export default function HomePage() {
           </div>
 
           {/* Social proof */}
-          <div
+          {/* <div
             style={{
               marginTop: 32,
               display: "flex",
@@ -186,7 +186,7 @@ export default function HomePage() {
             <span>
               <b style={{ color: "var(--ink)" }}>4,200+</b> hungry humans already in line
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Right column — phone */}
@@ -243,7 +243,7 @@ export default function HomePage() {
                 letterSpacing: "-0.01em",
               }}
             >
-              NEW<br />in<br />Mangalore!
+              NEW
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function HomePage() {
       <FooterCTA
         tag="● Last call"
         headline={"Join the\nwaitlist."}
-        sub="Get in early. First 10,000 humans unlock the OG badge, a free year of pro features, and a spot on the founding wall."
+        sub="Get in early. First 100 humans unlock the OG badge, a free year of pro features, and a spot on the founding wall."
         btnLabel="Count me in →"
       />
     </div>

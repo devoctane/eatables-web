@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Eatables — Find the good stuff. Skip the rest.",
   description:
-    "Eatables is the pocket-sized food scout that hunts down legit restaurants, hidden gems and holy-sh*t-good dishes — wherever you happen to be hungry.",
+    "Eatables is the pocket-sized food scout that hunts down legit restaurants, hidden gems and delicious dishes — wherever you happen to be hungry.",
 };
 
 export default function RootLayout({

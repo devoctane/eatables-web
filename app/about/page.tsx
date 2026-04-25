@@ -74,13 +74,13 @@ export default function AboutPage() {
         {/* Image row — 2-col on mobile, 3-col on desktop */}
         <div className="e-about-imgs">
           <div className="e-about-img-1">
-            <FoodPlaceholder label="co-founders · 2024" tone="warm" />
+            <FoodPlaceholder label="our team" tone="warm" />
           </div>
           <div className="e-about-img-2">
-            <FoodPlaceholder label="first meetup · bandra" tone="green" />
+            <FoodPlaceholder label="brainstorming" tone="green" />
           </div>
           <div className="e-about-img-3">
-            <FoodPlaceholder label="early sketches" tone="rose" />
+            <FoodPlaceholder label="early ideas" tone="rose" />
           </div>
         </div>
       </div>
@@ -134,11 +134,10 @@ export default function AboutPage() {
 
           <div style={{ fontSize: "clamp(15px, 1.6vw, 19px)", lineHeight: 1.65, color: "rgba(253,251,243,0.78)" }}>
             <p style={{ marginBottom: 24 }}>
-              In the summer of 2024, our co-founder{" "}
-              <b style={{ color: "var(--cream)" }}>Sarah</b> was visiting Mangalore, famished, navigating a language barrier, and desperately swiping through every food app on her phone. She wanted to dive into the city's diverse cuisines, but none of the traditional platforms were actually helpful. Every search just led to more frustration, leaving her feeling completely disconnected from the local food scene.
+              It started with a simple idea: food discovery should be honest, helpful, and human. Too many apps were filled with generic reviews and paid placements that didn't actually help people find great food.
             </p>
             <p style={{ marginBottom: 24 }}>
-              Meanwhile, somewhere in that exact same city, few developers were having a breakthrough. Frustrated by the gap between incredible local food and the people who wanted to eat it, one pitched a simple concept: "I've got an idea for our project. An app that actually helps you discover the best cuisines nearby." The response was an immediate, enthusiastic "Cooooool." That day, Eatables was born.
+              We wanted to build something different — a platform where real food lovers could share genuine experiences, discover hidden gems, and connect with others who share their passion for good food.
             </p>
 
             <div
@@ -160,34 +159,11 @@ export default function AboutPage() {
             </div>
 
             <p style={{ marginBottom: 24 }}>
-              Today, we are still building that exact concept—a feature-rich food discovery and review platform that acts as your personal travel companion. We treat your search for authentic, diverse food like a real problem worth solving, ensuring you never have to settle for a disappointing meal in an unfamiliar city.
+              Today, we're building a food discovery platform that acts as your personal guide to authentic cuisine. We believe great food experiences shouldn't be hard to find — they should be celebrated and shared.
             </p>
             <p style={{ marginBottom: 0 }}>
-              We’re a passionate team based right here in Mangalore. We love our local flavors, we get a little too excited during brainstorming sessions, and we firmly believe the best culinary experience of your trip is waiting just down the street—you just need the right app to find it.
+              We're a passionate team of food lovers and developers. We get excited about great meals, we believe in honest reviews, and we're committed to helping people discover the best food wherever they are.
             </p>
-
-            <div style={{ marginTop: 48, display: "flex", alignItems: "center", gap: 20 }}>
-              <div
-                style={{
-                  width: 72, height: 72, borderRadius: 36,
-                  background: "#E8D4A0",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 24, fontWeight: 700, color: "#5A4A2A",
-                  fontFamily: "var(--font-space-grotesk), sans-serif",
-                  flexShrink: 0,
-                }}
-              >
-                O
-              </div>
-              <div>
-                <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, color: "var(--cream)" }}>
-                  Octane Founders
-                </div>
-                <div style={{ fontSize: 14, color: "rgba(253,251,243,0.6)", marginTop: 2 }}>
-                  Co-founder &amp; CEO · Eats everything twice
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -259,7 +235,7 @@ export default function AboutPage() {
       <FooterCTA
         tag="● Join us"
         headline={"Eat better.\nTogether."}
-        sub="Summer 2026. Your city, unlocked. Get on the waitlist — we'll send you exactly one email when it's your turn."
+        sub="Coming soon. Join the waitlist to be among the first to experience honest food discovery."
         btnLabel="Get early access →"
       />
     </div>
