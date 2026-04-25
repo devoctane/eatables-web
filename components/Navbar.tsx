@@ -55,7 +55,7 @@ export default function Navbar() {
 
       {/* Desktop CTA */}
       <Link
-        href="/"
+        href="/#waitlist"
         className="e-nav-cta"
         style={{
           padding: "10px 20px",
