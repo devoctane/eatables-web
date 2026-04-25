@@ -22,7 +22,7 @@ const steps = [
   {
     n: "03",
     title: "Earn your stripes.",
-    text: "Unlock foodie badges, get early access to new restaurants, and become part of a community of genuine food lovers who trust your taste.",
+    text: "Build a following, unlock foodie badges, and get early tastings from restaurants that want your take before it drops.",
     tone: "rose" as const,
   },
 ];
@@ -31,28 +31,27 @@ const testimonials = [
   {
     quote: "I found my favourite dumpling spot by tapping three buttons. That never happens.",
     name: "Priya K.",
-    handle: "@priyaeats",
+    handle: "@priyaeats · 2.4k followers",
     avatar: "#E8D4A0",
   },
   {
     quote: "Finally, a review app that doesn't read like a Yelp novel. Short, honest, delicious.",
     name: "Arjun M.",
-    handle: "@forktofork",
+    handle: "@forktofork · 8.1k followers",
     avatar: "#F5D6CC",
   },
   {
     quote: "I got invited to three tasting menus in my first month. On a student budget. Hello?",
     name: "Sana J.",
-    handle: "@sanasnacks",
+    handle: "@sanasnacks · 1.2k followers",
     avatar: "#D9E5C8",
   },
 ];
 
 const faqs = [
-  { q: "How much does it cost?", a: "Free. Forever. We make money from restaurant partnerships — never from your reviews, never from hidden placements." },
-  { q: "Do I need any special qualifications?", a: "Nope. We want hungry humans with good taste and honest opinions. If you love food and can write one genuine take, you're in." },
-  { q: "What do I get for being a foodie?", a: "Early access to the app, a verified foodie badge, invites to tastings with partner restaurants, and special perks from restaurants that value your honest reviews." },
-  { q: "When does it launch?", a: "Coming soon. Waitlist members will get early access, so join now to be among the first!" },
+    { q: "Do I need a huge following to join?", a: "Nope. We want hungry humans with good taste, not influencer resumés. If you love food and can write one honest sentence, you're in." },
+  { q: "How much does it cost?", a: "Free. Forever. We make money from restaurant partnerships — never from your reviews, never from hidden placements." },  { q: "What do I get for being a foodie?", a: "Early access to the app, a verified foodie badge, invites to tastings with partner restaurants, and a real creator dashboard once you hit 500 followers." },
+  { q: "When does it launch?", a: "Summer 2026. Waitlist members get in two weeks early, with their city unlocked first." },
 ];
 
 export default function FoodiesPage() {
@@ -149,21 +148,13 @@ export default function FoodiesPage() {
                 marginBottom: 36,
               }}
             >
-              Eatables is your personal food guide. Drop honest
-              reviews, discover hidden gems, and connect with other genuine food lovers —
+              Eatables turns your meals into a feed worth following. Drop honest
+              reviews, rack up followers, and get invited to the good stuff —
               all from your phone, between bites.
             </p>
 
             <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
               <button
-                onClick={() => {
-                  const waitlistElement = document.getElementById("waitlist");
-                  if (waitlistElement) {
-                    waitlistElement.scrollIntoView({ behavior: "smooth" });
-                    const input = waitlistElement.querySelector("input");
-                    if (input) input.focus();
-                  }
-                }}
                 style={{
                   padding: "16px 24px",
                   background: "var(--ink)",
@@ -250,7 +241,7 @@ export default function FoodiesPage() {
                   borderBottom: "1px solid rgba(26,26,26,0.08)",
                 }}
               >
-                {[{ num: "400+", label: "Reviews" }, { num: "80+", label: "Discoveries" }, { num: "15+", label: "Badges" }].map((s) => (
+                {[{ num: "412", label: "Reviews" }, { num: "2.4k", label: "Followers" }, { num: "18", label: "Badges" }].map((s) => (
                   <div key={s.label} style={{ display: "flex", flexDirection: "column" }}>
                     <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em" }}>
                       {s.num}
@@ -284,7 +275,7 @@ export default function FoodiesPage() {
       </div>
 
       {/* HOW IT WORKS */}
-      <div
+      {/* <div
         className="e-how-section"
         style={{ background: "var(--ink)", color: "var(--cream)", position: "relative", overflow: "hidden" }}
       >
@@ -363,7 +354,7 @@ export default function FoodiesPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* TESTIMONIALS
       <div className="e-test-section" style={{ background: "var(--cream)", position: "relative" }}>
@@ -490,7 +481,7 @@ export default function FoodiesPage() {
               The stuff<br />you&apos;re about<br />to ask.
             </h2>
             <div style={{ fontSize: 16, color: "rgba(26,26,26,0.65)", lineHeight: 1.55, marginTop: 20 }}>
-              Short answers. If something's still unclear, email <b>support@eatables.app</b> — a human will reply, promise.
+              Short answers. If something&apos;s still unclear, email <b><a href="mailto:support@eatables.app">hiupport@eatables.app</a></b> — a human will reply, promise.
             </div>
           </div>
 

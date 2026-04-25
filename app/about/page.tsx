@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import FoodPlaceholder from "@/components/FoodPlaceholder";
+import Image from "next/image";
 import FooterCTA from "@/components/FooterCTA";
 
 const values = [
@@ -74,13 +74,31 @@ export default function AboutPage() {
         {/* Image row — 2-col on mobile, 3-col on desktop */}
         <div className="e-about-imgs">
           <div className="e-about-img-1">
-            <FoodPlaceholder label="our team" tone="warm" />
+            <Image
+              src="/food-images/img1.jpg"
+              alt="Our team"
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto", borderRadius: "16px", objectFit: "cover" }}
+            />
           </div>
           <div className="e-about-img-2">
-            <FoodPlaceholder label="brainstorming" tone="green" />
+            <Image
+              src="/food-images/img2.jpg"
+              alt="Brainstorming session"
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto", borderRadius: "16px", objectFit: "cover" }}
+            />
           </div>
           <div className="e-about-img-3">
-            <FoodPlaceholder label="early ideas" tone="rose" />
+            <Image
+              src="/food-images/img3.jpg"
+              alt="Early ideas and concepts"
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto", borderRadius: "16px", objectFit: "cover" }}
+            />
           </div>
         </div>
       </div>
@@ -104,68 +122,71 @@ export default function AboutPage() {
           }}
         />
 
-        <div className="e-origin-grid">
-          <div>
-            <div
-              style={{
-                fontFamily: "ui-monospace, Menlo, monospace",
-                fontSize: 12,
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                color: "var(--primary)",
-                marginBottom: 16,
-              }}
-            >
-              ● The story
-            </div>
-            <h2
-              style={{
-                fontFamily: "var(--font-space-grotesk), sans-serif",
-                fontSize: "clamp(32px, 4vw, 56px)",
-                fontWeight: 700,
-                letterSpacing: "-0.035em",
-                lineHeight: 0.95,
-                margin: 0,
-              }}
-            >
-              It started<br />with a hungry<br />traveler.
-            </h2>
-          </div>
+<div className="e-origin-grid">
+  <div>
+    <div
+      style={{
+        fontFamily: "ui-monospace, Menlo, monospace",
+        fontSize: 12,
+        letterSpacing: "0.2em",
+        textTransform: "uppercase",
+        color: "var(--primary)",
+        marginBottom: 16,
+      }}
+    >
+      ● The story
+    </div>
+    <h2
+      style={{
+        fontFamily: "var(--font-space-grotesk), sans-serif",
+        fontSize: "clamp(32px, 4vw, 56px)",
+        fontWeight: 700,
+        letterSpacing: "-0.035em",
+        lineHeight: 0.95,
+        margin: 0,
+      }}
+    >
+      It started<br />with a hungry<br />traveler.
+    </h2>
+  </div>
 
-          <div style={{ fontSize: "clamp(15px, 1.6vw, 19px)", lineHeight: 1.65, color: "rgba(253,251,243,0.78)" }}>
-            <p style={{ marginBottom: 24 }}>
-              It started with a simple idea: food discovery should be honest, helpful, and human. Too many apps were filled with generic reviews and paid placements that didn't actually help people find great food.
-            </p>
-            <p style={{ marginBottom: 24 }}>
-              We wanted to build something different — a platform where real food lovers could share genuine experiences, discover hidden gems, and connect with others who share their passion for good food.
-            </p>
+  <div style={{ fontSize: "clamp(15px, 1.6vw, 19px)", lineHeight: 1.65, color: "rgba(253,251,243,0.78)" }}>
+    <p style={{ marginBottom: 24 }}>
+      We realized something was broken when finding a good meal in an unfamiliar place became harder than actually cooking one. Instead of helpful advice, hungry travelers were left scrolling through apps filled with generic, bloated reviews and paid placements that pushed average food to the top of the list.
+    </p>
+    <p style={{ marginBottom: 24 }}>
+      It started with a simple, frustrating realization: food discovery should be honest, helpful, and human.
+    </p>
+    <p style={{ marginBottom: 24 }}>
+      We wanted to build something entirely different. We envisioned a platform stripped of the noise and the sponsored rankings—a place where real food lovers could share genuine experiences, unearth hidden culinary gems, and connect with others who share their unapologetic passion for good food.
+    </p>
 
-            <div
-              style={{
-                fontFamily: "var(--font-space-grotesk), sans-serif",
-                fontSize: "clamp(20px, 2.5vw, 40px)",
-                fontWeight: 500,
-                fontStyle: "italic",
-                letterSpacing: "-0.02em",
-                lineHeight: 1.15,
-                color: "var(--primary)",
-                margin: "48px 0",
-                padding: "24px 0",
-                borderTop: "1.5px solid var(--primary)",
-                borderBottom: "1.5px solid var(--primary)",
-              }}
-            >
-              &ldquo;If the review doesn&apos;t help you decide in ten seconds, it&apos;s not a review. It&apos;s a blog.&rdquo;
-            </div>
+    <div
+      style={{
+        fontFamily: "var(--font-space-grotesk), sans-serif",
+        fontSize: "clamp(20px, 2.5vw, 40px)",
+        fontWeight: 500,
+        fontStyle: "italic",
+        letterSpacing: "-0.02em",
+        lineHeight: 1.15,
+        color: "var(--primary)",
+        margin: "48px 0",
+        padding: "24px 0",
+        borderTop: "1.5px solid var(--primary)",
+        borderBottom: "1.5px solid var(--primary)",
+      }}
+    >
+      &ldquo;If the review doesn&apos;t help you decide in ten seconds, it&apos;s not a review. It&apos;s a blog.&rdquo;
+    </div>
 
-            <p style={{ marginBottom: 24 }}>
-              Today, we're building a food discovery platform that acts as your personal guide to authentic cuisine. We believe great food experiences shouldn't be hard to find — they should be celebrated and shared.
-            </p>
-            <p style={{ marginBottom: 0 }}>
-              We're a passionate team of food lovers and developers. We get excited about great meals, we believe in honest reviews, and we're committed to helping people discover the best food wherever they are.
-            </p>
-          </div>
-        </div>
+    <p style={{ marginBottom: 24 }}>
+      Today, that vision is Eatables. We are building a food discovery platform designed to act as your personal, trusted guide to authentic cuisine. We firmly believe that great food experiences shouldn&apos;t feel impossible to find—they should be easily discovered, celebrated, and shared with a community that cares.
+    </p>
+    <p style={{ marginBottom: 0 }}>
+      Behind the screen, we&apos;re just a passionate team of food lovers and developers. We get a little too excited about discovering a great local meal, we staunchly believe in the power of honest reviews, and we are completely committed to helping people find the absolute best food, wherever their travels take them.
+    </p>
+  </div>
+</div>
       </div>
 
       {/* MISSION + VALUES */}

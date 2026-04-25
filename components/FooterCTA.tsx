@@ -89,7 +89,7 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
         <span>© 2026 Eatables · Made hungry</span>
         <span className="e-footer-links">
           <a target="_blank" href="https://www.eatables.app/docs/privacy-policy">Privacy & Terms</a>
-          <span>hello@eatables.app</span>
+            <a href="mailto:hello@eatables.app">hello@eatables.app</a>
         </span>
       </div>
     </footer>
