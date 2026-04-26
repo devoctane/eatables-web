@@ -1,5 +1,5 @@
-import { TypographyH3 } from "@/app/components/typography";
-import { Head, Description, Date, Author } from "@/app/components/head";
+import { TypographyH3 } from "../../../components/typography";
+import { Head, Description, Date, Author } from "../../../components/head";
 
 export default function PrivacyPolicyPage() {
   return (
