@@ -5,7 +5,12 @@ interface FooterCTAProps {
   tag?: string;
 }
 
-export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us" }: FooterCTAProps) {
+export default function FooterCTA({
+  headline,
+  sub,
+  btnLabel,
+  tag = "● Join us",
+}: FooterCTAProps) {
   const lines = headline.split("\n");
 
   return (
@@ -43,7 +48,14 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
         ))}
       </h2>
 
-      <p style={{ fontSize: "clamp(15px, 1.8vw, 19px)", marginTop: 24, maxWidth: 520, lineHeight: 1.5 }}>
+      <p
+        style={{
+          fontSize: "clamp(15px, 1.8vw, 19px)",
+          marginTop: 24,
+          maxWidth: 520,
+          lineHeight: 1.5,
+        }}
+      >
         {sub}
       </p>
 
@@ -88,8 +100,13 @@ export default function FooterCTA({ headline, sub, btnLabel, tag = "● Join us"
       >
         <span>© 2026 Eatables · Made hungry</span>
         <span className="e-footer-links">
-          <a target="_blank" href="https://www.eatables.app/docs/privacy-policy">Privacy & Terms</a>
-            <a href="mailto:hello@eatables.app">hello@eatables.app</a>
+          <a
+            target="_blank"
+            href="https://www.eatables.app/docs/privacy-policy"
+          >
+            Privacy & Terms
+          </a>
+          <a href="mailto:ashwin.octane@gmail.com">hello@eatables.app</a>
         </span>
       </div>
     </footer>

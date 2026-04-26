@@ -49,10 +49,22 @@ const steps = [
 // ];
 
 const faqs = [
-  { q: "How is Eatables different from Yelp or Google Reviews?", a: "Eatables focuses on short, honest reviews from real foodies, not long essays. We prioritize authenticity and partner with restaurants for exclusive perks." },
-  { q: "Do I need to be an influencer to join?", a: "Not at all. We welcome anyone who loves food and can share genuine opinions." },
-  { q: "What do I get as a verified foodie?", a: "Early app access, exclusive badges, invites to restaurant tastings, and a creator dashboard for managing your reviews." },
-  { q: "When can I start using Eatables?", a: "Coming soon. Join the waitlist for early access in your city." },
+  {
+    q: "How is Eatables different from Yelp or Google Reviews?",
+    a: "Eatables focuses on short, honest reviews from real foodies, not long essays. We prioritize authenticity and partner with restaurants for exclusive perks.",
+  },
+  {
+    q: "Do I need to be an influencer to join?",
+    a: "Not at all. We welcome anyone who loves food and can share genuine opinions.",
+  },
+  {
+    q: "What do I get as a verified foodie?",
+    a: "Early app access, exclusive badges, invites to restaurant tastings, and a creator dashboard for managing your reviews.",
+  },
+  {
+    q: "When can I start using Eatables?",
+    a: "Coming soon. Join the waitlist for early access in your city.",
+  },
 ];
 
 export default function FoodiesPage() {
@@ -106,7 +118,15 @@ export default function FoodiesPage() {
                 boxShadow: "0 2px 0 rgba(26,26,26,0.08)",
               }}
             >
-              <span style={{ width: 6, height: 6, borderRadius: 6, background: "var(--primary)", display: "inline-block" }} />
+              <span
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: 6,
+                  background: "var(--primary)",
+                  display: "inline-block",
+                }}
+              />
               For the hungry &amp; opinionated
             </div>
 
@@ -149,12 +169,19 @@ export default function FoodiesPage() {
                 marginBottom: 36,
               }}
             >
-              Eatables turns your meals into a portfolio worth showcasing. Drop honest
-              reviews, and get invited to the good stuff —
-              all from your phone, between bites.
+              Eatables turns your meals into a portfolio worth showcasing. Drop
+              honest reviews, and get invited to the good stuff — all from your
+              phone, between bites.
             </p>
 
-            <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 12,
+                alignItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
               <a
                 href="/#waitlist"
                 style={{
@@ -182,7 +209,8 @@ export default function FoodiesPage() {
             <div
               className="e-foodie-card"
               style={{
-                boxShadow: "0 30px 60px -20px rgba(0,0,0,0.18), 0 0 0 1.5px rgba(26,26,26,0.06)",
+                boxShadow:
+                  "0 30px 60px -20px rgba(0,0,0,0.18), 0 0 0 1.5px rgba(26,26,26,0.06)",
               }}
             >
               {/* Badge */}
@@ -207,16 +235,24 @@ export default function FoodiesPage() {
                   fontFamily: "var(--font-space-grotesk), sans-serif",
                 }}
               >
-                VERIFIED<br />FOODIE
+                VERIFIED
+                <br />
+                FOODIE
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
                 <div
                   style={{
-                    width: 64, height: 64, borderRadius: 32,
+                    width: 64,
+                    height: 64,
+                    borderRadius: 32,
                     background: "#E8D4A0",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontSize: 22, fontWeight: 700, color: "#5A4A2A",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 22,
+                    fontWeight: 700,
+                    color: "#5A4A2A",
                     fontFamily: "var(--font-space-grotesk), sans-serif",
                     flexShrink: 0,
                   }}
@@ -224,15 +260,30 @@ export default function FoodiesPage() {
                   S
                 </div>
                 <div>
-                  <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 20, fontWeight: 700, letterSpacing: "-0.01em" }}>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-space-grotesk), sans-serif",
+                      fontSize: 20,
+                      fontWeight: 700,
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
                     Sarah
                   </div>
                   <div style={{ fontSize: 13, color: "#8A7F5F" }}>@sarah</div>
                 </div>
               </div>
 
-              <div style={{ marginTop: 18, fontSize: 14, lineHeight: 1.5, color: "#5A4A2A" }}>
-                &ldquo;Ramen hunter. Vada pav evangelist. I eat so you don&apos;t have to guess.&rdquo;
+              <div
+                style={{
+                  marginTop: 18,
+                  fontSize: 14,
+                  lineHeight: 1.5,
+                  color: "#5A4A2A",
+                }}
+              >
+                &ldquo;Ramen hunter. Vada pav evangelist. I eat so you
+                don&apos;t have to guess.&rdquo;
               </div>
 
               <div
@@ -246,33 +297,66 @@ export default function FoodiesPage() {
                   borderBottom: "1px solid rgba(26,26,26,0.08)",
                 }}
               >
-                {[{ num: "412", label: "Reviews" }, { num: "37", label: "Restaurants" }, { num: "18", label: "Badges" }].map((s) => (
-                  <div key={s.label} style={{ display: "flex", flexDirection: "column" }}>
-                    <div style={{ fontFamily: "var(--font-space-grotesk), sans-serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em" }}>
+                {[
+                  { num: "412", label: "Reviews" },
+                  { num: "37", label: "Restaurants" },
+                  { num: "18", label: "Badges" },
+                ].map((s) => (
+                  <div
+                    key={s.label}
+                    style={{ display: "flex", flexDirection: "column" }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: "var(--font-space-grotesk), sans-serif",
+                        fontSize: 28,
+                        fontWeight: 700,
+                        letterSpacing: "-0.02em",
+                      }}
+                    >
                       {s.num}
                     </div>
-                    <div style={{ fontSize: 11, color: "#8A7F5F", letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, marginTop: 2 }}>
+                    <div
+                      style={{
+                        fontSize: 11,
+                        color: "#8A7F5F",
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase",
+                        fontWeight: 600,
+                        marginTop: 2,
+                      }}
+                    >
                       {s.label}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div style={{ display: "flex", gap: 6, marginTop: 14, flexWrap: "wrap" }}>
-                {["🏅 Top reviewer", "🌶 Spice queen", "🍜 Ramen scout"].map((t) => (
-                  <span
-                    key={t}
-                    style={{
-                      fontSize: 11, fontWeight: 600,
-                      padding: "6px 10px",
-                      background: "var(--accent-bg)",
-                      borderRadius: 999,
-                      color: "var(--ink)",
-                    }}
-                  >
-                    {t}
-                  </span>
-                ))}
+              <div
+                style={{
+                  display: "flex",
+                  gap: 6,
+                  marginTop: 14,
+                  flexWrap: "wrap",
+                }}
+              >
+                {["🏅 Top reviewer", "🌶 Spice queen", "🍜 Ramen scout"].map(
+                  (t) => (
+                    <span
+                      key={t}
+                      style={{
+                        fontSize: 11,
+                        fontWeight: 600,
+                        padding: "6px 10px",
+                        background: "var(--accent-bg)",
+                        borderRadius: 999,
+                        color: "var(--ink)",
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -458,7 +542,10 @@ export default function FoodiesPage() {
       </div> */}
 
       {/* FAQ */}
-      <div className="e-faq-section" style={{ background: "var(--accent-bg)", position: "relative" }}>
+      <div
+        className="e-faq-section"
+        style={{ background: "var(--accent-bg)", position: "relative" }}
+      >
         <div className="e-faq-grid">
           <div>
             <div
@@ -483,10 +570,27 @@ export default function FoodiesPage() {
                 margin: 0,
               }}
             >
-              The stuff<br />you&apos;re about<br />to ask.
+              The stuff
+              <br />
+              you&apos;re about
+              <br />
+              to ask.
             </h2>
-            <div style={{ fontSize: 16, color: "rgba(26,26,26,0.65)", lineHeight: 1.55, marginTop: 20 }}>
-              Short answers. If something&apos;s still unclear, email <b><a href="mailto:support@eatables.app">support@eatables.app</a></b> — a human will reply, promise.
+            <div
+              style={{
+                fontSize: 16,
+                color: "rgba(26,26,26,0.65)",
+                lineHeight: 1.55,
+                marginTop: 20,
+              }}
+            >
+              Short answers. If something&apos;s still unclear, email{" "}
+              <b>
+                <a href="mailto:ashwin.octane@gmail.com">
+                  support@eatables.app
+                </a>
+              </b>{" "}
+              — a human will reply, promise.
             </div>
           </div>
 
@@ -499,8 +603,12 @@ export default function FoodiesPage() {
                   background: openFaq === i ? "#fff" : "transparent",
                   borderRadius: 16,
                   padding: "22px 24px",
-                  borderBottom: openFaq === i ? "none" : "1.5px solid rgba(26,26,26,0.12)",
-                  boxShadow: openFaq === i ? "0 10px 30px -10px rgba(26,26,26,0.1)" : "none",
+                  borderBottom:
+                    openFaq === i ? "none" : "1.5px solid rgba(26,26,26,0.12)",
+                  boxShadow:
+                    openFaq === i
+                      ? "0 10px 30px -10px rgba(26,26,26,0.1)"
+                      : "none",
                   marginBottom: openFaq === i ? 8 : 0,
                   cursor: "pointer",
                   transition: "all .2s",
@@ -521,17 +629,33 @@ export default function FoodiesPage() {
                   <span>{f.q}</span>
                   <span
                     style={{
-                      width: 32, height: 32, borderRadius: 16,
-                      background: openFaq === i ? "var(--primary)" : "rgba(26,26,26,0.08)",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: 18, fontWeight: 500, flexShrink: 0,
+                      width: 32,
+                      height: 32,
+                      borderRadius: 16,
+                      background:
+                        openFaq === i
+                          ? "var(--primary)"
+                          : "rgba(26,26,26,0.08)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: 18,
+                      fontWeight: 500,
+                      flexShrink: 0,
                     }}
                   >
                     {openFaq === i ? "–" : "+"}
                   </span>
                 </div>
                 {openFaq === i && (
-                  <div style={{ marginTop: 14, fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,26,0.7)" }}>
+                  <div
+                    style={{
+                      marginTop: 14,
+                      fontSize: 15,
+                      lineHeight: 1.6,
+                      color: "rgba(26,26,26,0.7)",
+                    }}
+                  >
                     {f.a}
                   </div>
                 )}
